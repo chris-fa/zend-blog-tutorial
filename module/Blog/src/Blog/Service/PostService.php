@@ -2,6 +2,8 @@
 
 namespace Blog\Service;
 
+use Blog\Model\Post;
+
 class PostService implements PostServiceInterface
 {
     protected $data = [

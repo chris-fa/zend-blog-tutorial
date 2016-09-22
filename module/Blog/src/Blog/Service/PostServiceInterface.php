@@ -4,7 +4,7 @@ namespace Blog\Service;
 
 use Blog\Model\PostInterface;
 
-interface BlogServiceInterface
+interface PostServiceInterface
 {
     public function findAllPosts();
     public function findPost($id);
