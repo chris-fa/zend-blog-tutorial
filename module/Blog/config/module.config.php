@@ -2,8 +2,11 @@
 
 return [
     'service_manager' => [
-        'invokables' => [
-            'Blog\Service\PostServiceInterface' => 'Blog\Service\PostService',
+        /* 'invokables' => [ */
+        /*     'Blog\Service\PostServiceInterface' => 'Blog\Service\PostService', */
+        /* ], */
+        'factories' => [
+            'Blog\Service\PostServiceInterface' => 'Blog\Factory\DoctrinePostServiceFactory',
         ],
     ],
     'view_manager' => array(
