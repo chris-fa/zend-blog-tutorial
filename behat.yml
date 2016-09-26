@@ -1,0 +1,8 @@
+default:
+  extensions:
+    Behat\MinkExtension:
+      base_url: 'http://localhost'
+      sessions:
+        default:
+          zombie:
+            node_modules_path: ./node_modules/
