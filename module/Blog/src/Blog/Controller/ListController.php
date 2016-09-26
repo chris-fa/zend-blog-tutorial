@@ -20,8 +20,10 @@ class ListController extends AbstractActionController
 
     public function indexAction()
     {
+        $posts = $this->postService->findAllPosts();
+
         return new ViewModel([
-            'posts' => $this->postService->findAllPosts(),
+            'posts' => $posts,
         ]);
     }
 }
