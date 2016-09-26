@@ -16,6 +16,12 @@
         "behat/behat": "^3.2",
         "behat/mink-extension": "^2.2",
         "behat/mink": "^1.7",
-        "behat/mink-zombie-driver": "^1.4"
+        "behat/mink-zombie-driver": "^1.4",
+        "zendframework/zend-test": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Blog\\AcceptanceTests\\": "feature/application/"
+        }
     }
 }
