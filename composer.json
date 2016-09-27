@@ -7,6 +7,12 @@
         "zf2"
     ],
     "homepage": "http://framework.zend.com/",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/inbaz/zf2behat-extension"
+        }
+    ],
     "require": {
         "php": ">=5.5",
         "zendframework/zendframework": "~2.5",
@@ -17,7 +23,8 @@
         "behat/mink-extension": "^2.2",
         "behat/mink": "^1.7",
         "behat/mink-zombie-driver": "^1.4",
-        "zendframework/zend-test": "^2.5"
+        "zendframework/zend-test": "^2.5",
+        "inbaz/zf2behat-extension": "dev-master@dev"
     },
     "autoload": {
         "psr-4": {
