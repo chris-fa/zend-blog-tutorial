@@ -1,8 +1,9 @@
 default:
   extensions:
+    MvLabs\Zf2Extension\Zf2Extension: ~
     Behat\MinkExtension:
-      base_url: 'http://localhost'
+      base_url: 'http://localhost:8085'
       sessions:
         default:
           zombie:
-            node_modules_path: ./node_modules/
+            node_modules_path: /Users/Christopher/.npm-packages/lib/node_modules/

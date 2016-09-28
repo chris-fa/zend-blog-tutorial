@@ -3,24 +3,33 @@
 use Behat\Behat\Tester\Exception\PendingException;
 use Behat\MinkExtension\Context\MinkContext;
 
-/* define('APPLICATION_ENV', 'testing'); */
-/* define('APPLICATION_PATH', dirname(__FILE__) . '/../..'); */
+use MvLabs\Zf2Extension\Context\Zf2AwareContextInterface;
 
-/* set_include_path('.' . PATH_SEPARATOR . APPLICATION_PATH . '/../library' */
-/*     . PATH_SEPARATOR . get_include_path()); */
+use Zend\Mvc\Application;
 
+// TODO: use PSR-4 import
 require_once dirname(__FILE__) . '/../application/ControllerTestCase.php';
 
-/* use Blog\AcceptanceTests\ControllerTestCase; */
-
-class FeatureContext extends MinkContext
+class FeatureContext extends MinkContext implements Zf2AwareContextInterface
 {
     protected $app;
+    protected $params;
+    protected $moduleService;
 
-    public function __construct()
+    public function __construct(array $params = [])
     {
-        $this->app = new ControllerTestCase();
-        $this->app->setUp();
+        $this->params = $params;
+    }
+
+    /**
+     * Sets HttpKernel instance.
+     * This method will be automatically called by Zf2Extension ContextInitializer.
+     *
+     * @param Zend\Mvc\Application $zf2MvcApplication
+     */
+    public function setZf2App(Application $zf2MvcApplication)
+    {
+        $this->app = $zf2MvcApplication;
     }
 
     /**
@@ -28,7 +37,6 @@ class FeatureContext extends MinkContext
      */
     public function thereAreBlogEntries($arg1)
     {
-        $a = $this->app->db();
-        $var_dump($a);
+        // TODO: stub
     }
 }
