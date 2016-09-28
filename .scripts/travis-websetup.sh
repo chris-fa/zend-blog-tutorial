@@ -24,10 +24,5 @@ echo "Restartin apache2..."
 sudo service apache2 restart
 
 echo "Configuring MySQL..."
-mysql -u root -e "CREATE USER 'root'@'localhost' IDENTIFIED BY 'root'"
-mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION"
-
-composer install
-php public/index.php orm:schema-tool:create
-
-
+mysql -u root -e "CREATE USER 'blog'@'localhost' IDENTIFIED BY 'secret'"
+mysql -u root -e "GRANT ALL PRIVILEGES ON *.* TO 'blog'@'localhost' WITH GRANT OPTION;"

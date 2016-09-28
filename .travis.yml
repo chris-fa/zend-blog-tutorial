@@ -6,5 +6,7 @@ php:
 
 before_script:
   - ./.scripts/travis-websetup.sh
+  - composer install
+  - php public/index.php orm:schema-tool:create
 
 script: vendor/bin/behat
