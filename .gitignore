@@ -8,4 +8,5 @@ nbproject
 .project
 .settings
 vendor
+node_modules
 composer.phar

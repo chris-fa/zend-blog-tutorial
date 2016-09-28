@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="phpunit_bootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="blog">
+            <directory>./module/Blog/test/BlogTest</directory>
+        </testsuite>
+        <testsuite name="todo">
+            <directory>./module/Todo/test/TodoTest</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

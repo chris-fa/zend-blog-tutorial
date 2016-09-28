@@ -1,0 +1,20 @@
+language: php
+sudo: required
+
+php:
+  - '5.6'
+
+services:
+  - mysql
+
+env:
+  - BEHAT_PARAMS='{"extensions":{"Behat\\MinkExtension": {"sessions": {"default": {"zombie": {"node_modules_path": "/Users/Christopher/.npm-packages/lib/node_modules/"}}}}}}'
+
+before_script:
+  - ./.scripts/travis-websetup.sh
+  - composer install
+  - php public/index.php orm:schema-tool:create
+  - php public/index.php dbal:import .sql/data.sql
+  - npm install -g zombie
+
+script: vendor/bin/behat

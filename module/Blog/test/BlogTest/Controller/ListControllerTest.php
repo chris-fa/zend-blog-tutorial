@@ -4,7 +4,7 @@ namespace BlogTest\Controller;
 
 use Zend\Test\PHPUnit\Controller\AbstractHttpControllerTestCase;
 
-class BlogTestController extends AbstractHttpControllerTestCase
+class ListTestController extends AbstractHttpControllerTestCase
 {
     public function setUp()
     {
@@ -29,9 +29,18 @@ class BlogTestController extends AbstractHttpControllerTestCase
         $sm->setService('Blog\Service\PostServiceInterface', $mock);
 
         $this->dispatch('/blog');
+
         $this->assertResponseStatusCode(200);
+
         $this->assertModuleName('Blog');
         $this->assertControllerName('Blog\Controller\List');
         $this->assertMatchedRouteName('post');
+    }
+
+    public function testABC()
+    {
+        // Arrange
+        // Act
+        // Assert
     }
 }
