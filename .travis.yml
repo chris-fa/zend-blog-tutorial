@@ -12,5 +12,6 @@ before_script:
   - composer install
   - php public/index.php orm:schema-tool:create
   - php public/index.php dbal:import .sql/data.sql
+  - npm install -g zombie
 
 script: vendor/bin/behat
