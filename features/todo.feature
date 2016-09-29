@@ -12,14 +12,14 @@ Feature: TODO
         # Then
         Then the response status code should be 200
 
-    Scenario: Create a todo item
-        # Given
-        Given I go to "/todo/create"
+    # Scenario: Create a todo item
+    #     # Given
+    #     Given I go to "/todo/create"
 
-        # When
-        When I fill in "name" with "Christopher"
-        And I press "Create"
+    #     # When
+    #     When I fill in "name" with "Christopher"
+    #     And I press "Create"
 
-        # Then
-        Then I should see "Usuario creado exitosamente"
+    #     # Then
+    #     Then I should see "Usuario creado exitosamente"
 
