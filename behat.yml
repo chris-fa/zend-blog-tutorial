@@ -1,6 +1,12 @@
 default:
+  autoload:
+    '': %paths.base%/features/bootstrap/
+  suites:
+    default:
+      path: %paths.base%/features
   extensions:
-    MvLabs\Zf2Extension\Zf2Extension: ~
+    Alteris\BehatZendframeworkExtension\ServiceContainer\Extension:
+       configuration: config/application.config.php
     Behat\MinkExtension:
       sessions:
         default:

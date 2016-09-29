@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e63bec151e4235b8dafb6e64d1664ea1",
-    "content-hash": "eeb14cde5b2383788a610ae96c6dcf95",
+    "hash": "c061318769506d6bff63c206b265b621",
+    "content-hash": "3dcb743a433884cb312e186e333d5215",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -5356,6 +5356,47 @@
     ],
     "packages-dev": [
         {
+            "name": "alteris/behat-zendframework-extension",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alteris/behat-zendframework-extension.git",
+                "reference": "245a7d9527b5f5acb50052812a8318fd056d9325"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alteris/behat-zendframework-extension/zipball/245a7d9527b5f5acb50052812a8318fd056d9325",
+                "reference": "245a7d9527b5f5acb50052812a8318fd056d9325",
+                "shasum": ""
+            },
+            "require": {
+                "behat/behat": "^3.1",
+                "zendframework/zend-mvc": "~2.0 | ~3.0"
+            },
+            "require-dev": {
+                "symfony/process": "~2.1|~3.0"
+            },
+            "type": "lib",
+            "autoload": {
+                "psr-4": {
+                    "Alteris\\BehatZendframeworkExtension\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tomasz Kunicki",
+                    "homepage": "https://github.com/timiTao",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Extension connect Behat scenario with Zendframework application",
+            "time": "2016-09-28 13:54:58"
+        },
+        {
             "name": "behat/behat",
             "version": "v3.2.1",
             "source": {
@@ -5713,62 +5754,6 @@
                 "transliterator"
             ],
             "time": "2015-09-28 16:26:35"
-        },
-        {
-            "name": "chris-fa/zf2behat-extension",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/chris-fa/zf2behat-extension.git",
-                "reference": "b8f8d3b8790628c5d1b3462176b0cb16e7c4d114"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/chris-fa/zf2behat-extension/zipball/b8f8d3b8790628c5d1b3462176b0cb16e7c4d114",
-                "reference": "b8f8d3b8790628c5d1b3462176b0cb16e7c4d114",
-                "shasum": ""
-            },
-            "require": {
-                "behat/behat": ">=3.0.0",
-                "php": ">=5.3.3",
-                "zendframework/zendframework": ">=2.1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.5.*"
-            },
-            "type": "behat-extension",
-            "autoload": {
-                "psr-0": {
-                    "MvLabs\\Zf2Extension": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "David Contavalli",
-                    "email": "mauipipe@gmail.com"
-                },
-                {
-                    "name": "Andi Nitsche",
-                    "email": "andi@inbaz.org"
-                },
-                {
-                    "name": "Christopher Francisco",
-                    "email": "chris273a@gmail.com"
-                }
-            ],
-            "description": "Zend Framework 2 extension for Behat",
-            "keywords": [
-                "MvLabs",
-                "behat extension",
-                "zf2"
-            ],
-            "support": {
-                "source": "https://github.com/chris-fa/zf2behat-extension/tree/master"
-            },
-            "time": "2016-09-28 19:09:13"
         },
         {
             "name": "symfony/class-loader",
@@ -6217,9 +6202,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "chris-fa/zf2behat-extension": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
